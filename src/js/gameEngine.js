@@ -1,9 +1,10 @@
 function start(state, game) {
+    game.createWizard(state.wizard);
     window.requestAnimationFrame(gameRepeat.bind(null,state,game)); 
 }
 
 function gameRepeat(state, game) {
-    console.log(state.player)
+    
 
     window.requestAnimationFrame(gameRepeat.bind(null,state,game))
 }
