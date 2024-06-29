@@ -6,7 +6,8 @@ function initState() {
             height:100,
             startX: Math.floor(Math.random() * 1440),
             startY: Math.floor(Math.random() * 500),
-        }
+        },
+        keys: {}
     }
     //Тук ще държим състоянието на нашата игра 
     return state;
