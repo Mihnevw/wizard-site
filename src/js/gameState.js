@@ -1,9 +1,13 @@
 function initState() {
-    let startX = Math.floor(Math.random() * 1440)
-    let startY = Math.floor(Math.random() * 500)
-
+    let startX = Math.floor(Math.random() * 1000);
+    let startY = Math.floor(Math.random() * 500);
+    
     const state = {
         player: 'Pesho',
+        gameOver: false,
+        score: 0,
+        scoreRate: 1,
+        killScore: 1000,
         wizard: {
             width: 82,
             height: 100,
@@ -12,16 +16,27 @@ function initState() {
             speed: 10,
         },
         bugStats: {
-            width:50,
-            height:50,
+            width: 50,
+            height: 50,
+            nextSpawnTimestamp: 0,
+            maxSpawnInterval: 1500,
+            speed: 8,
+        },
+        fireball: {
+            width: 20,
+            height: 20,
+            speed: 12,
+            nextSpawnTimestamp: 0,
+            fireRate: 500,
         },
         keys: {
-            keyA: false,
-            keyS: false,
-            keyD: false,
-            keyW: false,
+            KeyA: false,
+            KeyS: false,
+            KeyD: false,
+            KeyW: false,
+            Space: false,
         }
     }
-    //Тук ще държим състоянието на нашата игра 
+
     return state;
 }
