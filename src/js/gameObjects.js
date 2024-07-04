@@ -20,6 +20,18 @@ function initGameObject() {
         this.gameSreen.appendChild(wizardElement);
 
         return wizardElement
-       } 
+       },
+
+       createBug() {
+        const bugElement = document.createElement('div');
+        bugElement.classList.add('bug');
+
+        bugElement.style.width = stats.width + 'px';
+        bugElement.style.height = stats.height + 'px';
+        bugElement.style.left = gameSreen.offsetWidth - stats.width + 'px';
+        bugElement.style.top = Math.floor(Math.random() * gameSreen.offsetHeight - stats.height) + 'px';
+
+        gameSreen.appendChild(bugElement);
+       }
     }
 };
